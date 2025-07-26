@@ -1,12 +1,12 @@
 Instructions to run the prototype:
 1. 	Create a folder in your preferred directory and name it bhutan_app
 2.	Download all the required files from Google Drive and place them inside this folder a shown in the reference below:
-    D:/
-    └── Bhutan_App/
-        ├── data/
-        │   └── bhutan_runoff_hourly_data.csv
-        ├── flood_risk_app.py
-        └── trained_model.py
+            D:/
+            └── Bhutan_App/
+                ├── data/
+                │   └── bhutan_runoff_hourly_data.csv
+                ├── flood_risk_app.py
+                └── trained_model.py
 
 3.	Open VSCode -> Open Folder -> Select the bhutan_app folder
 4.	Run trained_model.py (wait for the execution to complete)
