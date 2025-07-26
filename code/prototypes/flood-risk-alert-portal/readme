@@ -1,6 +1,6 @@
 Instructions to run the prototype:
-1. 	Create a folder in your preferred directory and name it bhutan_app
-2.	Download all the required files from Google Drive and place them inside this folder a shown in the reference below:
+1. Create a folder in your preferred directory and name it bhutan_app
+2. Download all the required files from Google Drive and place them inside this folder a shown in the reference below:
             D:/
             └── Bhutan_App/
                 ├── data/
@@ -8,11 +8,11 @@ Instructions to run the prototype:
                 ├── flood_risk_app.py
                 └── trained_model.py
 
-3.	Open VSCode -> Open Folder -> Select the bhutan_app folder
-4.	Run trained_model.py (wait for the execution to complete)
-5.	Run flood_risk_app.py (wait for the execution to complete)
-6.	Go to Terminal (present in the top ribbon) -> New Terminal
-7.	Write this command in the terminal: streamlit run flood_risk_app.py
-8.	The streamlit app will now open in your browser
+3. Open VSCode -> Open Folder -> Select the bhutan_app folder
+4. Run trained_model.py (wait for the execution to complete)
+5. Run flood_risk_app.py (wait for the execution to complete)
+6. Go to Terminal (present in the top ribbon) -> New Terminal
+7. Write this command in the terminal: streamlit run flood_risk_app.py
+8. The streamlit app will now open in your browser
 
 
