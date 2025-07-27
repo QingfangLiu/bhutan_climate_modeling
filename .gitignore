@@ -4,3 +4,6 @@
 # Ignore all Parquet files in merged_era5data
 data/merged_era5data/*.parquet
 
+# Ignore ecmwf forecast data due to size limit
+ecmwf_forecasts/
+
