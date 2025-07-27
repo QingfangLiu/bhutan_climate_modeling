@@ -7,10 +7,11 @@ This repository is part of [Omdena's local chapter challenge](https://www.omdena
 
 Special thanks to the following team members for their collaboration:
 
-- **Qingfang Liu** – Lead on modeling workflow, data pipeline, and presentation  
+- **Qingfang Liu** – Lead end-to-end modeling workflow, data pipeline, model development and evaluation, and presentation  
+- **Tuhin Das** — Led prototype development; contributed to data analysis, EDA, and overall modeling workflow 
+- **Marlon Marín** — Assisted with data download  
 - [Name 1] – Role or main contribution  
-- [Name 2] – Role or main contribution  
-- [Name 3] – Role or main contribution  
+
 
 > 📝 *If you're a team member and would like your contribution added or updated, feel free to open a PR or issue!*
 
