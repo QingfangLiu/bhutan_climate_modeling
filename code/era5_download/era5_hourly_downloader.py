@@ -4,11 +4,11 @@ import time
 
 def download_era5_hourly_variable(variable_name,
                                    years,
-                                   base_data_dir='../era5_data_grib_raw', 
+                                   base_data_dir='../../era5_data_grib_raw', 
                                    area=[28.5, 88.5, 26.5, 92.0]):
     """
     Download hourly ERA5 data for a single variable over Bhutan for specified years.
-    Saves to ../era5_data/<variable_name>/ from current script location.
+    Saves to ../era5_data_grib_raw/<variable_name>/ from current script location.
 
     Parameters:
     - variable_name: str, name of the ERA5 variable (e.g., '2m_temperature')
