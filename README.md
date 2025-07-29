@@ -117,7 +117,25 @@ At the midpoint of the project, as new members joined, I presented the core ML m
 
 ---
 
-### 4. Deployment (Next step)
+### 4. GraphCast Forecast Integration (Ongoing)
+
+🛰️ Goal: Incorporate short-term weather forecasts for real-time flood risk prediction
+
+📦 Data Source
+- GraphCast (by DeepMind): 10-day, 6-hourly forecasts at 0.25° resolution
+- A state-of-the-art GNN-based global weather forecasting model trained on ERA5 data
+
+🛠️ Processing
+- Clipped to Bhutan region
+- Downsampled to 6-hour intervals
+
+📈 Usage
+- Used as input features in ML/DL models
+- Considering fine-tuning the model for Bhutan’s local climate context
+
+---
+
+### 5. Deployment (Next step)
 **Goal:** Build a usable predictive tool  
 
 - Options:
