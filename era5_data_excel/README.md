@@ -1,6 +1,6 @@
 ### 📊 6-Hour ERA5 Weather Data (1979–2025)
 
-This folder contains downsampled ERA5 weather variable data in Excel format. Each file corresponds to one variable and is saved in wide-format, with separate files for **1979–1999** and **2000–2025** to reduce file size and ease access.
+This folder contains downsampled ERA5 weather variable data in Excel format. Each file corresponds to one variable and is saved in wide-format, with separate files for **1979–1999** and **2000–2025** to reduce file size and ease access. **All timestamps are in UTC time zone, not adjusted to Bhutan time.**
 
 #### ✅ Key Details
 
