@@ -1,0 +1,56 @@
+EventID,Date,EventType,District,Location,Latitude,Longitude,Fatalities,Description
+FF2022_01,07/07/2022,Flood,Samdrup Jongkhar,Samdrup Jongkhar,26.8055,91.5036,0,Urban flooding after heavy rainfall
+FF2022_02,07/07/2022,Flash Flood,Mongar,Mongar town,27.27,91.24,0,Flash flood
+FF2022_03,07/07/2022,Flash Flood,Wangduephodrang,Chuzomsa,27.5494,89.8969,0,Flash flood
+FF2022_04,07/07/2022,Flash Flood,Mongar,Gyalpozhing,27.2676,91.1931,0,Flash flood
+FF2022_05,07/07/2022,Flash Flood,Trashigang,Trashigang town,27.3332,91.554,0,Flash flood
+FF2022_06,07/07/2022,Flash Flood,Trashiyangtse,Trashiyangtse town,27.6139,91.5086,0,Flash flood
+FF2022_07,07/07/2022,Flash Flood,Pemagatshel,Pemagatshel town,27.045,91.4035,0,Flash flood
+FF2022_08,07/07/2022,Flood,Sarpang,Sarpang,26.8627,90.2717,0,Flooded market area
+FF2022_09,07/07/2022,Flash Flood,Lhuentse,Lhuentse town,27.6678,91.183,0,Flash flood
+FF2022_10,07/07/2022,Flood,Tsirang,Damphu town,27.0246,90.1246,0,Urban flooding after heavy rainfall
+FF2022_11,07/07/2022,Flash Flood,Trongsa,Trongsa town,27.5026,90.5083,0,Flash flood
+FF2021_01,16/06/2021,Flash Flood,Gasa,Laya,28.0515,89.6343,10,Flash flood/landslide
+FF2021_02,15/06/2021,Flash Flood,Trongsa,Chendebji,27.5576,90.5896,0,Flash flood destroyed bridge
+FF2021_03,13/06/2021,Flash Flood,Punakha,Zomlingthang,27.6106,89.861,0,Flash flood
+FF2020_02,04/10/2020,Flash Flood,Wangduephodrang,Ruecheykha,27.4306,90.025,0,Flash flood destroyed crops
+FF2020_01,01/10/2020,Flash Flood,Zhemgang,Bjizam,27.2158,90.6576,0,Flash flood
+FF2019_02,05/07/2019,Flash Flood,Sarpang,Sarpang town,26.8627,90.2717,0,Flash flood
+FF2019_01,26/06/2019,Flash Flood,Mongar,Gyalpozhing,27.2676,91.1931,0,Flash flood
+FF2018_05,07/08/2018,Flash Flood,Samtse,Samtse town,26.8997,89.1011,0,Flash flood
+FF2018_04,01/08/2018,Flash Flood,Trashigang,Trashigang town,27.3332,91.554,0,Flash flood
+FF2018_02,20/07/2018,Flood,Samdrup Jongkhar,Samdrup Jongkhar,26.8055,91.5036,0,Urban flooding due to intense rainfall
+FF2018_03,20/07/2018,Flood,Tsirang,Damphu town,27.0246,90.1246,0,Flooded market area
+FF2018_01,10/07/2018,Flood,Phuentsholing,Phuentsholing town,26.8635,89.3883,0,Heavy rainfall caused urban flooding
+FF2018_01,10/07/2018,Flood,Phuentsholing,Phuentsholing,26.8635,89.3883,0,Heavy rainfall caused urban flooding
+FF2017_02,15/08/2017,Flood,Punakha,Punakha,27.5916,89.8774,0,Flooding after heavy rainfall
+FF2017_01,12/07/2017,Flash Flood,Sarpang,Sarpang town,26.8627,90.2717,0,Flash flood following intense rain
+FF2017_01,12/07/2017,Flash Flood,Sarpang,Sarpang,26.8627,90.2717,0,Flash flood after intense rain
+FF2016_03,03/08/2016,Flood,Phuentsholing,Phuentsholing town,26.8635,89.3883,0,Flooding caused traffic standstill
+FF2016_02,20/07/2016,Flash Flood,Samdrup Jongkhar,Samdrup Jongkhar,26.8055,91.5036,0,Flash flood and urban flooding
+FF2016_01,19/07/2016,Flash Flood,Lhuentse,Lhuentse town,27.6678,91.183,0,Flash flood due to monsoon rains
+FF2015_03,25/08/2015,Flood,Samtse,Samtse town,26.8997,89.1011,0,Flood
+FF2015_02,09/08/2015,Flood,Sarpang,Sarpang town,26.8627,90.2717,0,Flood
+FF2015_01,25/07/2015,Flash Flood,Gasa,Laya,28.0515,89.6343,0,Flash flood
+FF2014_01,06/07/2014,Flood,Phuentsholing,Phuentsholing town,26.8635,89.3883,0,Monsoon flood
+FF2013_02,18/08/2013,Flood,Samdrup Jongkhar,Samdrup Jongkhar,26.8055,91.5036,0,Urban flooding
+FF2013_01,16/08/2013,Flash Flood,Punakha,Punakha,27.5916,89.8774,0,Flash flood
+FF2012_01,19/07/2012,Flash Flood,Sarpang,Sarpang town,26.8627,90.2717,0,Flash flood
+FF2011_01,08/07/2011,Flood,Phuentsholing,Phuentsholing town,26.8635,89.3883,0,Flood
+FF2010_02,06/08/2010,Flash Flood,Trashigang,Trashigang town,27.3332,91.554,0,Flash flood
+FF2010_01,25/07/2010,Flood,Samtse,Samtse town,26.8997,89.1011,0,Monsoon flood
+FF2009_01,25/05/2009,Flood,Sarpang,Sarpang,26.8627,90.2717,2,Cyclone Aila: Major floods in southern Bhutan
+FF2008_01,23/07/2008,Flash Flood,Samdrup Jongkhar,Samdrup Jongkhar,26.8055,91.5036,0,Flash flood caused by heavy rain
+FF2007_01,15/07/2007,Flood,Sarpang,Sarpang,26.8627,90.2717,0,Floods swept away houses and crops
+FF2006_01,19/07/2006,Flash Flood,Punakha,Punakha,27.5916,89.8774,0,Flash flood
+FF2004_02,26/07/2004,Flood,Phuentsholing,Phuentsholing,26.8635,89.3883,0,Flash flood in town
+FF2004_01,25/07/2004,Flood,Sarpang,Sarpang,26.8627,90.2717,9,Major monsoon flood: roads destroyed
+FF2000_02,12/08/2000,Flash Flood,Sarpang,Sarpang,26.8627,90.2717,0,Flood swept through the market
+FF2000_01,16/07/2000,Flood,Phuentsholing,Phuentsholing,26.8635,89.3883,0,Urban flooding
+FF1996_01,14/08/1996,Flood,Phuentsholing,Phuentsholing,26.8635,89.3883,0,Major flood
+FF1994_01,10/07/1994,Flood,Punakha,Punakha,27.5916,89.8774,0,Monsoon flood
+FF1990_01,08/08/1990,Flash Flood,Sarpang,Sarpang,26.8627,90.2717,0,Flash flood
+FF1980_01,10/07/1980,Flash Flood,Wangduephodrang,Wangdue town,27.4867,89.8995,0,Flash flood
+FF1974_01,15/08/1974,Flood,Punakha,Punakha,27.5916,89.8774,0,Large monsoon flood
+FF1968_01,15/07/1968,Flood,Phuentsholing,Phuentsholing,26.8635,89.3883,0,Flash flood
+FF1957_01,01/08/1957,Flood,Gasa,Mo Chu valley,27.889,89.8556,0,Major monsoon flood
