@@ -18,6 +18,7 @@ This folder contains downsampled ERA5 weather variable data in Excel format. Eac
 
 - **📌 Variables Included**:
   - `total_precipitation`
+  - `runoff`
   - `surface_runoff`
   - `sub_surface_runoff`
   - `snowmelt`
