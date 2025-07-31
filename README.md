@@ -1,7 +1,8 @@
-
 # 🌏 Bhutan Climate Modeling
 
-This repository is part of [Omdena's local chapter challenge](https://www.omdena.com/chapter-challenges/leveraging-ai-to-combat-climate-change-in-bhutan), focused on leveraging AI to combat climate change in Bhutan.
+This repository is part of two Omdena initiatives: the [Local Chapter Challenge](https://www.omdena.com/chapter-challenges/leveraging-ai-to-combat-climate-change-in-bhutan) and the [AI Innovation Project: Building ClimateSense AI](https://www.omdena.com/projects/building-climatesense-ai-climate-change-bhutan), both focused on leveraging AI to combat climate change in Bhutan.
+
+
 
 ## 👥 Collaborators
 
@@ -54,25 +55,35 @@ At the midpoint of the project, as new members joined, I presented the core ML m
 [ERA5 Single Levels - Copernicus Climate Data Store](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview)
 
 - **Variables:**  
-  - `Total_precipitation`  
-  - `2m_temperature`  
-  - `2m_dewpoint_temperature`  
-  - `10m_u_component_of_wind`  
-  - `10m_v_component_of_wind`  
-  - `surface_solar_radiation_downwards`  
-  - `potential_evaporation`  
-  - `snow_depth`  
-  - `Snowmelt`  
-  - `Soil temperature level 1`  
-  - `Relative_humidity`
-- **Region:** Bhutan bounding box
-- **Temporal range:** 1979 to latest year
+  - `total_precipitation`
+  - `runoff`
+  - `surface_runoff`
+  - `sub_surface_runoff`
+  - `snowmelt`
+  - `snow_depth`
+  - `soil_temperature_level_1`
+  - `surface_solar_radiation_downwards`
+  - `2m_temperature`
+  - `2m_dewpoint_temperature`
+  - `10m_u_component_of_wind`
+  - `10m_v_component_of_wind`
+- **Region:** Bhutan bounding box (`lat: 26.5°N to 28.5°N`, `lon: 88.5°E to 92.0°E`)
+- **Temporal range:** 1979 to latest date
 - **Tools:** `cdsapi`, structured folder organization (by variable/year)
 
+#### Flood Historical Records
+
+We also compiled flood event data from multiple public sources. With the help of ChatGPT agent, significant effort was made to manually review, deduplicate, and clean these records, resulting in a unified dataset of major flood events in Bhutan from 1979 to 2025.
+
+
 ####  Other Explored Data Sources
-- Local MET data (RH, Tmax, Tmin, Rainfall)
-- GLOF/flood event history 
-- River discharge or lake level data (if available)
+- Local meteorological data from weather stations (RH, Tmax, Tmin, Rainfall)
+- GLOF event history 
+
+
+####  Data Sources to explore
+- River discharge or lake level data
+- Earthquake data
 - DEM/topographic data (elevation, slope)
 - Land cover and infrastructure exposure
 
