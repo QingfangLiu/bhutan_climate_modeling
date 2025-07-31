@@ -1,3 +1,4 @@
+
 # Bhutan Flood Dataset Cleaning Summary
 
 **Finalized:** 2025-07-30  
@@ -11,12 +12,12 @@ This document summarizes the steps taken to process and clean the flood dataset 
 
 Combined information from:
 
-| Code | Original Source                             |
-|------|---------------------------------------------|
-| 1    | Major_Flash_Flood_Events_Bhutan_CLEANED     |
-| 2    | Tuhin_Flood_Data_1                          |
-| 3    | Qingfang_Flood_Data_1                       |
-| 4    | Compendium_extreme_events_vol2              |
+| Code | Original Source                             | Reference URL                                                                 |
+|------|---------------------------------------------|--------------------------------------------------------------------------------|
+| 1    | Komori et al. Inventory, NCHM Annual Reports, Published Research Data (manually collected) | -                                                                              |
+| 2    | DesInventar Bhutan Disaster Database         | https://www.desinventar.net/DesInventar/profiletab.jsp                        |
+| 3    | Qingfang_Flood_Data_1                       | https://www.nchm.gov.bt/attachment/ckfinder/userfiles/files/Extreme%20Weather%20Events%20Records%202022_docx-compressed.pdf |
+| 4    | Compendium_extreme_events_vol2              | -                                                                              |
 
 All records were merged into one unified dataset, aligning column structures and content.
 
