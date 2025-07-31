@@ -90,35 +90,37 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ---
 
-### 2. Data Preprocessing & Daily Aggregation
-**Goal:** Convert hourly data into daily metrics  
+### 2. Exploratory Data Analysis (EDA)
 
-- **Daily aggregations:**
-  - Sum: `Total_precipitation`, `Snowmelt`
-  - Mean: `2m_temperature`, `2m_dewpoint_temperature`, `RH`
-  - Max/min: computed for `Tmax`/`Tmin` from hourly temps
-- Use `xarray`/`pandas` to resample
+**Goal:** Understand patterns, distributions, and anomalies in the processed climate and flood datasets
+
+**Key Tasks:**
+- Visualize temporal trends (e.g., rainfall, runoff, temperature) across years and seasons
+- Compare variable distributions between flood and non-flood days
+- Perform correlation analysis between climate variables and flood occurrences
+- Identify extreme events using statistical thresholds
+
+
 
 ---
 
 ### 3. ML / DL Modeling (Ongoing)
 **Goal:** Predict flood or extreme rainfall risk  
 
-#### 🧩 Feature Engineering
+#### Feature Engineering
 - Lagged variables (1, 3, 7, 14, 30 days)
 - Rolling stats (3, 7, 14, 30 days)
 - Temporal features: `dayofyear`, monsoon flag
-- (Optional) Spatial features: elevation, river and lake metrics 
+- Spatial features: elevation, river and lake metrics 
 
-#### 🧠 Model Development
+#### Model Development
 - Binary classification (e.g., extreme rainfall event)  
 - Regression (e.g., total daily rainfall)
 - **Algorithms:**
   - ML: XGBoost, RandomForest, Logistic Regression
   - DL: CNN-LSTM, Transformers
-  - (Optional): GNN for spatiotemporal modeling across regions
 
-#### ✅ Evaluation
+#### Evaluation
 - Train/test split by time
 - Metrics:
   - Classification: Accuracy, F1-score, Confusion Matrix
