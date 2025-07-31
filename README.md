@@ -132,17 +132,14 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ### 4. GraphCast Forecast Integration (Ongoing)
 
-🛰️ Goal: Incorporate short-term weather forecasts for real-time flood risk prediction
-
-📦 Data Source
 - GraphCast (by DeepMind): 10-day, 6-hourly forecasts at 0.25° resolution
 - A state-of-the-art GNN-based global weather forecasting model trained on ERA5 data
 
-🛠️ Processing
+#### Processing
 - Clipped to Bhutan region
 - Downsampled to 6-hour intervals
 
-📈 Usage
+#### Usage
 - Used as input features in ML/DL models
 - Considering fine-tuning the model for Bhutan’s local climate context
 
@@ -167,7 +164,8 @@ We also compiled flood event data from multiple public sources. With the help of
 - `data/` – Mixed meteorological datasets, including raw and auxiliary data sources  
 - `docs/` – Flood prediction ML workflow documentation  
 - `era5_data_excel/` – ERA5 climate variables downsampled to 6-hour intervals and saved in Excel format  
-- `era5_data_grib_raw/` – Raw ERA5 climate data in GRIB format, organized by variable and year  
+- `era5_data_grib_raw/` – Raw ERA5 climate data in GRIB format, organized by variable and year
+- `flood_data/` – Cleaned and merged historical flood records for Bhutan (1979–2025), with source tracking and standardized formatting
 - `processed_MET_data/` – Cleaned and standardized meteorological data from each weather station
 - `world_boundaries_for_bhutan_map/` – Shapefiles and boundary data used for Bhutan mapping  
 - `README.md` – Project overview and usage instructions  
