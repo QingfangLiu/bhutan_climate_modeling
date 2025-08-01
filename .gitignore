@@ -7,3 +7,5 @@ data/merged_era5data/*.parquet
 # Ignore ecmwf forecast data due to size limit
 ecmwf_forecasts/
 
+# ignore graphcastGFS download due to size limit
+graphcastgfs*
