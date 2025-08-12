@@ -9,3 +9,6 @@ ecmwf_forecasts/
 
 # ignore graphcastGFS download due to size limit
 graphcastgfs*
+
+# ignore large files in HydroSHEDS
+HydroSHEDS/
