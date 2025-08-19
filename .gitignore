@@ -12,3 +12,6 @@ graphcastgfs*
 
 # ignore large files in HydroSHEDS
 HydroSHEDS/
+
+# ignore zip files
+*.zip
