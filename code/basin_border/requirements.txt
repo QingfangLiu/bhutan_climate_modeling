@@ -19,4 +19,4 @@ shapely
 geopandas
 pyproj
 rtree
-
+adjustText
