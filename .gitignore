@@ -1,8 +1,8 @@
 # Ignore GRIB index files
 *.idx
 
-# Ignore all Parquet files in merged_era5data
-data/merged_era5data/*.parquet
+# Ignore all era5 data (large space)
+data/era5/
 
 # Ignore ecmwf forecast data due to size limit
 ecmwf_forecasts/
