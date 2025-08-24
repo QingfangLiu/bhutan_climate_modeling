@@ -179,17 +179,30 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 
 ## 📁 Repository Structure
 
-- `code/` – Python scripts and notebooks for data downloading, processing and analysis  
-- `data/` – Mixed meteorological datasets, including raw and auxiliary data sources  
-- `docs/` – Flood prediction ML workflow documentation  
-- `era5_data_excel/` – ERA5 climate variables downsampled to 6-hour intervals and saved in Excel format  
-- `era5_data_grib_raw/` – Raw ERA5 climate data in GRIB format, organized by variable and year
-- `flood_data/` – Cleaned and merged historical flood records for Bhutan (1979–2025), with source tracking and standardized formatting
-- `processed_MET_data/` – Cleaned and standardized meteorological data from each weather station
-- `world_boundaries_for_bhutan_map/` – Shapefiles and boundary data used for Bhutan mapping
-- `186 Watershed boundary/` – Watershed boundary shapefiles for Bhutan  
-- `Basin boundary/` – Basin-level boundary shapefiles for Bhutan   
-- `README.md` – Project overview and usage instructions  
-- `.gitignore` – Specifies intentionally untracked files to ignore
-
-
+```
+.
+├─ code/                         # Python scripts & notebooks for downloading, cleaning, features, modeling
+├─ deploy/                       # Docker/K8s/Prefect/Terraform configs for running in dev/prod
+├─ docs/                         # Project documentation, diagrams, and notes
+├─ data/                         # All datasets organized by WHAT they are (each has raw/processed/README)
+│  ├─ basin_discharge/           # Basin discharge data (local government)
+│  │  ├─ raw/
+│  │  ├─ processed/
+│  │  └─ README.md
+│  ├─ boundaries/                # All boundary layers
+│  │  ├─ basins/
+│  │  ├─ 186_watershed/
+│  │  └─ world_boundaries_for_bhutan_map/
+│  ├─ era5/                      # ERA5 climate data
+│  │  ├─ era5_data_excel/
+│  │  ├─ era5_data_grib_raw/     
+│  │  └─ era5_merged
+│  ├─ flood_data/                # Cleaned and merged historical flood records for Bhutan (1979–2025), with source tracking and standardized formatting
+│  │  └─ README.md
+│  ├─ glof_data/                 # GLOF-related datasets
+│  ├─ HydroSHEDS/                # HydroSHEDS products
+│  └─ MET_data/                  # Meteorological station data (local government)
+│     ├─ raw/
+│     ├─ processed_MET_data/     # cleaned outputs: region PKLs, summary.csv, region_coordinates.csv
+│     └─ README.md
+```
