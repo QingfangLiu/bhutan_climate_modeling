@@ -11,7 +11,7 @@ ecmwf_forecasts/
 graphcastgfs*
 
 # ignore large files in HydroSHEDS
-HydroSHEDS/
+data/HydroSHEDS/
 
 # ignore zip files
 *.zip
