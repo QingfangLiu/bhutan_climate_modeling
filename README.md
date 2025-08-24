@@ -8,14 +8,13 @@ This repository is part of two Omdena initiatives: the [Local Chapter Challenge]
 
 Special thanks to the following team members for their collaboration:
 
-- **Qingfang Liu** – Lead end-to-end modeling workflow, data pipeline, model development and evaluation, and presentation  
+- **Qingfang Liu** – Led end-to-end modeling workflow, including data pipeline, model development, evaluation, and presentation  
 - **Tuhin Das** — Led prototype development; contributed to data analysis, EDA, and overall modeling workflow 
-- **Marlon Marín** — Assisted with data download  
-- [Name 1] – Role or main contribution  
-
+- **Pankaja Shankar** - Co-led prototype development; contributed to data preparation and analysis
+- **Marlon Marín** — Assisted with data download
+- [Name] – Role or main contribution  
 
 > 📝 *If you're a team member and would like your contribution added or updated, feel free to open a PR or issue!*
-
 
 ## ✅ Project Goals
 
@@ -35,14 +34,23 @@ I created this workflow and presented it to the team to support understanding an
 
 📘 Looking for modeling FAQs? See [docs/README.md](docs/README.md) for answers to common questions about the ML approach, data, and forecast design.
 
-
-At the midpoint of the project, as new members joined, I presented the core ML modeling framework and current progress to guide team alignment:
+At the project midpoint, I introduced new members to the core ML framework and progress to align the team:
 
 - [docs/Bhutan_flood_risk_prediction_system_using_ML.pdf](docs/Bhutan_flood_risk_prediction_system_using_ML.pdf)  
   - Introduced the ML modeling workflow and explained the use of surface runoff as a proxy for flood risk  
   - Walked through how the models were developed, including data preparation, EDA, and feature engineering  
   - Showcased completed models: Random Forest, XGBoost, and Linear Regression → RF performed best  
   - Proposed next steps and modeling priorities to align efforts and support collaboration across the team
+
+Later, I prepared and presented this mid-term report to Bhutan local climatologists to gather expert guidance and ensure our work benefits the community.
+
+- [docs/Bhutan_flood_midterm_report_for_expert_consultation.pdf](docs/Bhutan_flood_midterm_report_for_expert_consultation.pdf)
+  - Presented mid-term progress report to Bhutan local climatologists for domain expert guidance  
+  - Explained current two lines of work and their status  
+  - Summarized data sources used for weather forecasting  
+  - Detailed ML workflow and predictive features under development  
+  - Described three types of floods targeted and their spatial prediction levels  
+  - Prepared and led Q&A discussions to gather expert feedback
 
 
 ## 💡Project Roadmap
@@ -167,7 +175,9 @@ We also compiled flood event data from multiple public sources. With the help of
 - `era5_data_grib_raw/` – Raw ERA5 climate data in GRIB format, organized by variable and year
 - `flood_data/` – Cleaned and merged historical flood records for Bhutan (1979–2025), with source tracking and standardized formatting
 - `processed_MET_data/` – Cleaned and standardized meteorological data from each weather station
-- `world_boundaries_for_bhutan_map/` – Shapefiles and boundary data used for Bhutan mapping  
+- `world_boundaries_for_bhutan_map/` – Shapefiles and boundary data used for Bhutan mapping
+- `186 Watershed boundary/` – Watershed boundary shapefiles for Bhutan  
+- `Basin boundary/` – Basin-level boundary shapefiles for Bhutan   
 - `README.md` – Project overview and usage instructions  
 - `.gitignore` – Specifies intentionally untracked files to ignore
 
