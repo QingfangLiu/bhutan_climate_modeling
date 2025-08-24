@@ -20,7 +20,7 @@ Special thanks to the following team members for their collaboration:
 
 - Understand historical meteorological trends and seasonal/regional patterns  
 - Build and validate predictive models to forecast floods and extreme weather events such as glacial lake outburst floods (GLOFs)  
-- Support downstream applications like risk maps and early-warning systems
+- Design interactive dashboards and visualization tools to communicate flood and climate risks effectively to policymakers and local communities
 
 ## 📄 Project Documentation
 
@@ -77,7 +77,6 @@ Later, I prepared and presented this mid-term report to Bhutan local climatologi
   - `10m_v_component_of_wind`
 - **Region:** Bhutan bounding box (`lat: 26.5°N to 28.5°N`, `lon: 88.5°E to 92.0°E`)
 - **Temporal range:** 1979 to latest date
-- **Tools:** `cdsapi`, structured folder organization (by variable/year)
 
 #### Flood Historical Records
 
@@ -85,12 +84,13 @@ We also compiled flood event data from multiple public sources. With the help of
 
 
 ####  Other Explored Data Sources
+
 - Local meteorological data from weather stations (RH, Tmax, Tmin, Rainfall)
 - GLOF event history 
-
+- River discharge data
 
 ####  Data Sources to explore
-- River discharge or lake level data
+
 - Earthquake data
 - DEM/topographic data (elevation, slope)
 - Land cover and infrastructure exposure
@@ -195,12 +195,12 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 │  ├─ era5/                      # ERA5 climate data
 │  │  ├─ era5_data_excel/
 │  │  ├─ era5_data_grib_raw/     
-│  │  └─ era5_merged
+│  │  └─ era5_merged             # local only due to size limit
 │  ├─ flood_data/                # Cleaned and merged historical flood records for Bhutan (1979–2025)
 │  │  └─ README.md
 │  ├─ glof_data/                 # GLOF-related datasets
 │  ├─ HydroSHEDS/                # HydroSHEDS products
-│  └─ MET_data/                  # Meteorological station data (local government)
+│  └─ MET_data/                  # Meteorological station data (from local government)
 │     ├─ raw/
 │     ├─ processed_MET_data/     # cleaned outputs: region PKLs, summary.csv, region_coordinates.csv
 │     └─ README.md
