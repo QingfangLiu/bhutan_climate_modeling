@@ -138,18 +138,16 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ---
 
-### 4. GraphCast Forecast Integration (Ongoing)
+### 4. Forecast Data from ECMWF and GraphCast  
 
-- GraphCast (by DeepMind): 10-day, 6-hourly forecasts at 0.25° resolution
-- A state-of-the-art GNN-based global weather forecasting model trained on ERA5 data
+**Goal:** Leverage existing weather forecast systems and products to  
+1. Provide deployable, regionalized forecast products for Bhutan.  
+2. Use these forecasts as input features for flood risk prediction.  
 
-#### Processing
-- Clipped to Bhutan region
-- Downsampled to 6-hour intervals
+- **GraphCast (by DeepMind):** Provides 10-day, 6-hourly forecasts at 0.25° resolution. It is a state-of-the-art GNN-based global weather forecasting model trained on ERA5 reanalysis data. See the [GraphCast paper (Nature, 2023)](https://www.science.org/stoken/author-tokens/ST-1550/full) for details.  
+- **GraphCast Global Forecast System (GraphCastGFS):** An experimental system set up by the National Centers for Environmental Prediction (NCEP) to produce medium-range global forecasts using GraphCast outputs. The dataset is openly available via the [NOAA AWS Registry](https://registry.opendata.aws/noaa-nws-graphcastgfs-pds/).  
+- **ECMWF (European Centre for Medium-Range Weather Forecasts):** An independent intergovernmental organization that provides some of the most accurate global medium-range weather forecasts, including the ERA5 reanalysis dataset and high-resolution ensemble forecasts widely used in climate and hydrology research. More information is available on the [ECMWF forecasts portal](https://www.ecmwf.int/en/forecasts).  
 
-#### Usage
-- Used as input features in ML/DL models
-- Considering fine-tuning the model for Bhutan’s local climate context
 
 ---
 
