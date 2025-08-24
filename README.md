@@ -190,12 +190,13 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 │  ├─ boundaries/                # All boundary layers
 │  │  ├─ basins/
 │  │  ├─ 186_watershed/
-│  │  └─ world_boundaries_for_bhutan_map/
+│  │  ├─ world_boundaries_for_bhutan_map/
+│  │  └─ README.md
 │  ├─ era5/                      # ERA5 climate data
 │  │  ├─ era5_data_excel/
 │  │  ├─ era5_data_grib_raw/     
 │  │  └─ era5_merged
-│  ├─ flood_data/                # Cleaned and merged historical flood records for Bhutan (1979–2025), with source tracking and standardized formatting
+│  ├─ flood_data/                # Cleaned and merged historical flood records for Bhutan (1979–2025)
 │  │  └─ README.md
 │  ├─ glof_data/                 # GLOF-related datasets
 │  ├─ HydroSHEDS/                # HydroSHEDS products
