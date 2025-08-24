@@ -185,9 +185,7 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 ├─ deploy/                       # Docker/K8s/Prefect/Terraform configs for running in dev/prod
 ├─ docs/                         # Project documentation, diagrams, and notes
 ├─ data/                         # All datasets organized by WHAT they are (each has raw/processed/README)
-│  ├─ basin_discharge/           # Basin discharge data (local government)
-│  │  ├─ raw/
-│  │  ├─ processed/
+│  ├─ basin_discharge/           # Basin discharge data (from local government)
 │  │  └─ README.md
 │  ├─ boundaries/                # All boundary layers
 │  │  ├─ basins/
