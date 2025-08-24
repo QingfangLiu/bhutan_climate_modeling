@@ -2,7 +2,7 @@
 
 This repository is part of two Omdena initiatives: the [Local Chapter Challenge](https://www.omdena.com/chapter-challenges/leveraging-ai-to-combat-climate-change-in-bhutan) and the [AI Innovation Project: Building ClimateSense AI](https://www.omdena.com/projects/building-climatesense-ai-climate-change-bhutan), both focused on leveraging AI to combat climate change in Bhutan.
 
-
+Maintained by **Qingfang Liu**  
 
 ## 👥 Collaborators
 
@@ -98,7 +98,7 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ---
 
-### 2. Exploratory Data Analysis (EDA)
+### 2. Exploratory Data Analysis (EDA) (Ongoing) 
 
 **Goal:** Understand patterns, distributions, and anomalies in the processed climate and flood datasets
 
@@ -138,7 +138,7 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ---
 
-### 4. Forecast Data from ECMWF and GraphCast  
+### 4. Forecast Data from ECMWF and GraphCast (Completed) 
 
 **Goal:** Leverage existing weather forecast systems and products to  
 1. Provide deployable, regionalized forecast products for Bhutan.  
@@ -148,15 +148,28 @@ We also compiled flood event data from multiple public sources. With the help of
 - **GraphCast Global Forecast System (GraphCastGFS):** An experimental system set up by the National Centers for Environmental Prediction (NCEP) to produce medium-range global forecasts using GraphCast outputs. The dataset is openly available via the [NOAA AWS Registry](https://registry.opendata.aws/noaa-nws-graphcastgfs-pds/).  
 - **ECMWF (European Centre for Medium-Range Weather Forecasts):** An independent intergovernmental organization that provides some of the most accurate global medium-range weather forecasts, including the ERA5 reanalysis dataset and high-resolution ensemble forecasts widely used in climate and hydrology research. More information is available on the [ECMWF forecasts portal](https://www.ecmwf.int/en/forecasts).  
 
+---
+
+### 5. Spatial Alignment (Ongoing)  
+
+**Goal:** Align data from multiple sources across different spatial dimensions.  
+
+Examples of spatial dimensions include:  
+- **ERA5 historical meteorological data** and **weather forecasts** (both on gridded levels)  
+- **Geospatial and hydrological data** (organized at watershed and basin levels)  
+- **Early warning systems** (which need to operate at administrative levels)  
+
+We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https://nsdi.systems.gov.bt/data/Boundaries), and applied spatial interpolation and aggregation methods to align these spatial units. These aligned datasets are then used as inputs in ML and DL models.  
+
 
 ---
 
-### 5. Deployment (Next step)
+### 6. Deployment (Ongoing)
 **Goal:** Build a usable predictive tool  
 
 - Options:
   - Backend: Flask / FastAPI
-  - Frontend: Streamlit / Gradio interface
+  - Frontend: Streamlit
   - Daily scheduled inference
 - Stretch goals:
   - Interactive dashboard (Plotly, Dash)
