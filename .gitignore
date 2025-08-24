@@ -1,17 +1,15 @@
 # Ignore GRIB index files
 *.idx
 
-# Ignore all era5 data (large space)
+# Ignore all large data files
 data/era5/
+data/HydroSHEDS/
 
 # Ignore ecmwf forecast data due to size limit
 ecmwf_forecasts/
 
 # ignore graphcastGFS download due to size limit
 graphcastgfs*
-
-# ignore large files in HydroSHEDS
-data/HydroSHEDS/
 
 # ignore zip files
 *.zip
