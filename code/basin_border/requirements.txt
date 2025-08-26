@@ -20,3 +20,4 @@ geopandas
 pyproj
 rtree
 adjustText
+PyYAML
