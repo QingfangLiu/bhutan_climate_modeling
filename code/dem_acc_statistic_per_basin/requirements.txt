@@ -1,0 +1,10 @@
+numpy
+pandas
+geopandas
+shapely
+pyogrio
+rasterio
+rioxarray
+rasterstats
+rtree 
+rioxarray
