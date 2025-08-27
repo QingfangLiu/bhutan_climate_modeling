@@ -17,11 +17,18 @@ Special thanks to the following team members for their collaboration:
 
 > 📝 *If you're a team member and would like your contribution added or updated, feel free to open a PR or issue!*
 
-## ✅ Project Goals
 
-- Understand historical meteorological trends and seasonal/regional patterns  
-- Build and validate predictive models to forecast floods and extreme weather events such as glacial lake outburst floods (GLOFs)  
-- Design interactive dashboards and visualization tools to communicate flood and climate risks effectively to policymakers and local communities
+## ✅ Project Goals  
+
+1. **Advance scientific understanding of Bhutan’s climate and flood risks**  
+   Analyze historical and projected meteorological and hydrological patterns to identify seasonal, regional, and long-term trends.  
+
+2. **Develop reliable predictive and early warning systems**  
+   Build and validate models to forecast riverine floods, flash floods, and glacial lake outburst floods (GLOFs) under current and future climate scenarios.  
+
+3. **Strengthen decision-making and community resilience**  
+   Design user-centered tools, dashboards, and communication strategies to support policymakers, disaster managers, and local communities.  
+
 
 ## 📄 Project Documentation
 
@@ -58,8 +65,6 @@ Later, I prepared and presented this mid-term report to Bhutan local climatologi
 
 ### 1. Data Collection
 **Goal:** Collect and organize relevant data from multiple sources, including meteorological, hydrological, and other geospatial features. We reviewed existing machine learning research to identify the features most critical for flood forecasting and gathered high-quality datasets from reliable sources specific to Bhutan.
-
-
 
 #### Meteorological Data  
 - **Primary Source:** ERA5 Hourly Reanalysis  
@@ -221,7 +226,7 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 │  ├─ flood_data/                # Cleaned and merged historical flood records for Bhutan (1979–2025)
 │  │  └─ README.md
 │  ├─ glof_data/                 # GLOF-related datasets
-│  ├─ HydroSHEDS/                # HydroSHEDS products
+│  ├─ HydroSHEDS/                # HydroSHEDS products, local only due to size limit
 │  └─ MET_data/                  # Meteorological station data (from local government)
 │     ├─ raw/
 │     ├─ processed_MET_data/     # cleaned outputs: region PKLs, summary.csv, region_coordinates.csv
