@@ -11,6 +11,7 @@ Special thanks to the following team members for their collaboration:
 - **Qingfang Liu** – Led end-to-end modeling workflow, including data pipeline, model development, evaluation, and presentation  
 - **Tuhin Das** — Led prototype development; contributed to data analysis, EDA, and overall modeling workflow 
 - **Pankaja Shankar** - Co-led prototype development; contributed to data preparation and analysis
+- **Pavlo Kuts** - Led HydroSHEDS database download and analysis
 - **Marlon Marín** — Assisted with data download
 - [Name] – Role or main contribution  
 
@@ -56,27 +57,50 @@ Later, I prepared and presented this mid-term report to Bhutan local climatologi
 ## 💡Project Roadmap
 
 ### 1. Data Collection
-**Goal:** Fetch and organize relevant data from multiple sources  
+**Goal:** Collect and organize relevant data from multiple sources, including meteorological, hydrological, and other geospatial features. We reviewed existing machine learning research to identify the features most critical for flood forecasting and gathered high-quality datasets from reliable sources specific to Bhutan.
 
-#### ERA5 Hourly Reanalysis (Main Source)
 
-[ERA5 Single Levels - Copernicus Climate Data Store](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview)
 
-- **Variables:**  
-  - `total_precipitation`
-  - `runoff`
-  - `surface_runoff`
-  - `sub_surface_runoff`
-  - `snowmelt`
-  - `snow_depth`
-  - `soil_temperature_level_1`
-  - `surface_solar_radiation_downwards`
-  - `2m_temperature`
-  - `2m_dewpoint_temperature`
-  - `10m_u_component_of_wind`
-  - `10m_v_component_of_wind`
-- **Region:** Bhutan bounding box (`lat: 26.5°N to 28.5°N`, `lon: 88.5°E to 92.0°E`)
-- **Temporal range:** 1979 to latest date
+#### Meteorological Data  
+- **Primary Source:** ERA5 Hourly Reanalysis  
+  - [ERA5 Single Levels - Copernicus Climate Data Store](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=overview)  
+- **Extracted Variables:**  
+  - `total_precipitation`  
+  - `runoff`  
+  - `surface_runoff`  
+  - `sub_surface_runoff`  
+  - `snowmelt`  
+  - `snow_depth`  
+  - `soil_temperature_level_1`  
+  - `surface_solar_radiation_downwards`  
+  - `2m_temperature`  
+  - `2m_dewpoint_temperature`  
+  - `10m_u_component_of_wind`  
+  - `10m_v_component_of_wind`  
+
+- **Region:** Bhutan bounding box (`lat: 26.5°N – 28.5°N`, `lon: 88.5°E – 92.0°E`)  
+- **Temporal Coverage:** 1979 – present  
+- **Additional Data:** Local meteorological station observations (RH, Tmax, Tmin, Rainfall) are available but not directly used in the modeling process.  
+
+
+#### Hydrological Data  
+- **Source:** [HydroSHEDS](https://www.hydrosheds.org/)  
+
+**Extracted Variables:**  
+- **DEM (Digital Elevation Model):** Represents elevation data, used to capture terrain shape and slope.  
+- **ACC (Flow Accumulation):** Indicates the number of upstream cells draining into a given point, useful for identifying river networks.  
+
+**Summary Statistics (per basin/watershed):**  
+- `dem_min`, `dem_max`, `dem_mean`, `dem_std`, `dem_median`  
+- `acc_min`, `acc_max`, `acc_mean`, `acc_std`, `acc_median`  
+
+**Engineered Variables:**  
+- **Relief:** Difference between maximum and minimum elevation within a basin, representing terrain ruggedness.  
+- **elev_range_iqr_proxy:** Interquartile range of elevation values, used as a proxy for elevation variability.  
+- **flow_density_proxy:** Ratio of accumulated flow paths to the total area, reflecting stream network density.  
+
+**Purpose:** These engineered features were derived to better capture terrain and flow dynamics that may be more closely related to flood occurrence.  
+
 
 #### Flood Historical Records
 
@@ -85,15 +109,13 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ####  Other Explored Data Sources
 
-- Local meteorological data from weather stations (RH, Tmax, Tmin, Rainfall)
 - GLOF event history 
 - River discharge data
 
 ####  Data Sources to explore
 
 - Earthquake data
-- DEM/topographic data (elevation, slope)
-- Land cover and infrastructure exposure
+- Other geospatial features: land cover, infrastructure exposure, imperviousness, etc
 
 
 ---
