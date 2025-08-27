@@ -232,3 +232,23 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 │     ├─ processed_MET_data/     # cleaned outputs: region PKLs, summary.csv, region_coordinates.csv
 │     └─ README.md
 ```
+
+
+```
+code/
+├─ basin_discharge/              # basin shapefile inspection & conjunction with river discharge (to confirm)
+├─ hydrosheds_stats/             # Derive stats like dem & acc from hydrosheds data on basin and watershed levels (to confirm)
+├─ discharge/                    # analysis on river discharge data of each station (ongoing)
+├─ earthquake/                   # Earthquake-related scripts (ongoing)
+├─ ecmwf/                        # ECMWF forecast data handling (download, processing) (completed)
+├─ era5_download/                # Scripts for downloading ERA5 reanalysis data (completed)
+├─ era5_processing/              # Cleaning/transforming ERA5 into usable formats (completed)
+├─ flood_analysis/               # Flood-related analytics (ongoing)
+├─ geospatial/                   # Follow-up analysis on multiple geospatial features to prepare for ML modeling (ongoing)
+├─ glof_data/                    # GLOF data inspection & analysis (completed)
+├─ graphcast/                    # GraphCast forecast data handling (download, processing) (completed)
+├─ met_data/                     # Meteorological station data inspection & light EDA (completed)
+├─ modeling/                     # Machine learning / statistical models for prediction (ongoing)
+└─ watershed/                    # Watershed shapefile inspection (to confirm)
+```
+
