@@ -136,10 +136,37 @@ We also compiled flood event data from multiple public sources. With the help of
 - Identify extreme events using statistical thresholds
 
 
+---
+
+### 3. Forecast Data from ECMWF and GraphCast (Completed) 
+
+**Goal:** Leverage existing weather forecast systems and products to  
+1. Provide deployable, regionalized forecast products for Bhutan.  
+2. Use these forecasts as input features for flood risk prediction.  
+
+- **GraphCast (by DeepMind):** Provides 10-day, 6-hourly forecasts at 0.25° resolution. It is a state-of-the-art GNN-based global weather forecasting model trained on ERA5 reanalysis data. See the [GraphCast paper (Nature, 2023)](https://www.science.org/stoken/author-tokens/ST-1550/full) for details.  
+- **GraphCast Global Forecast System (GraphCastGFS):** An experimental system set up by the National Centers for Environmental Prediction (NCEP) to produce medium-range global forecasts using GraphCast outputs. The dataset is openly available via the [NOAA AWS Registry](https://registry.opendata.aws/noaa-nws-graphcastgfs-pds/).  
+- **ECMWF (European Centre for Medium-Range Weather Forecasts):** An independent intergovernmental organization that provides some of the most accurate global medium-range weather forecasts, including the ERA5 reanalysis dataset and high-resolution ensemble forecasts widely used in climate and hydrology research. More information is available on the [ECMWF forecasts portal](https://www.ecmwf.int/en/forecasts).  
 
 ---
 
-### 3. ML / DL Modeling (Ongoing)
+### 4. Spatial Alignment (Ongoing)  
+
+**Goal:** Align data from multiple sources across different spatial dimensions.  
+
+Examples of spatial dimensions include:  
+- **ERA5 historical meteorological data** and **weather forecasts** (both on gridded levels)  
+- **Geospatial and hydrological data** (organized at watershed and basin levels)  
+- **Early warning systems** (which need to operate at administrative levels)  
+
+We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https://nsdi.systems.gov.bt/data/Boundaries), and applied spatial interpolation and aggregation methods to align these spatial units. These aligned datasets are then used as inputs in ML and DL models.  
+
+
+
+---
+
+### 5. ML / DL Modeling (Ongoing)
+
 **Goal:** Predict flood or extreme rainfall risk  
 
 #### Feature Engineering
@@ -165,31 +192,7 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ---
 
-### 4. Forecast Data from ECMWF and GraphCast (Completed) 
 
-**Goal:** Leverage existing weather forecast systems and products to  
-1. Provide deployable, regionalized forecast products for Bhutan.  
-2. Use these forecasts as input features for flood risk prediction.  
-
-- **GraphCast (by DeepMind):** Provides 10-day, 6-hourly forecasts at 0.25° resolution. It is a state-of-the-art GNN-based global weather forecasting model trained on ERA5 reanalysis data. See the [GraphCast paper (Nature, 2023)](https://www.science.org/stoken/author-tokens/ST-1550/full) for details.  
-- **GraphCast Global Forecast System (GraphCastGFS):** An experimental system set up by the National Centers for Environmental Prediction (NCEP) to produce medium-range global forecasts using GraphCast outputs. The dataset is openly available via the [NOAA AWS Registry](https://registry.opendata.aws/noaa-nws-graphcastgfs-pds/).  
-- **ECMWF (European Centre for Medium-Range Weather Forecasts):** An independent intergovernmental organization that provides some of the most accurate global medium-range weather forecasts, including the ERA5 reanalysis dataset and high-resolution ensemble forecasts widely used in climate and hydrology research. More information is available on the [ECMWF forecasts portal](https://www.ecmwf.int/en/forecasts).  
-
----
-
-### 5. Spatial Alignment (Ongoing)  
-
-**Goal:** Align data from multiple sources across different spatial dimensions.  
-
-Examples of spatial dimensions include:  
-- **ERA5 historical meteorological data** and **weather forecasts** (both on gridded levels)  
-- **Geospatial and hydrological data** (organized at watershed and basin levels)  
-- **Early warning systems** (which need to operate at administrative levels)  
-
-We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https://nsdi.systems.gov.bt/data/Boundaries), and applied spatial interpolation and aggregation methods to align these spatial units. These aligned datasets are then used as inputs in ML and DL models.  
-
-
----
 
 ### 6. Deployment (Ongoing)
 **Goal:** Build a usable predictive tool  
@@ -211,28 +214,47 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 ├─ code/                         # Python scripts & notebooks for downloading, cleaning, features, modeling
 ├─ deploy/                       # Docker/K8s/Prefect/Terraform configs for running in dev/prod
 ├─ docs/                         # Project documentation, diagrams, and notes
-├─ data/                         # All datasets organized by WHAT they are (each has raw/processed/README)
-│  ├─ basin_discharge/           # Basin discharge data (from local government)
-│  │  └─ README.md
-│  ├─ boundaries/                # All boundary layers
-│  │  ├─ basins/
-│  │  ├─ 186_watershed/
-│  │  ├─ world_boundaries_for_bhutan_map/
-│  │  └─ README.md
-│  ├─ era5/                      # ERA5 climate data
-│  │  ├─ era5_data_excel/
-│  │  ├─ era5_data_grib_raw/     
-│  │  └─ era5_merged             # local only due to size limit
-│  ├─ flood_data/                # Cleaned and merged historical flood records for Bhutan (1979–2025)
-│  │  └─ README.md
-│  ├─ glof_data/                 # GLOF-related datasets
-│  ├─ HydroSHEDS/                # HydroSHEDS products, local only due to size limit
-│  └─ MET_data/                  # Meteorological station data (from local government)
-│     ├─ raw/
-│     ├─ processed_MET_data/     # cleaned outputs: region PKLs, summary.csv, region_coordinates.csv
-│     └─ README.md
+├─ data/                         # All datasets organized by WHAT they are
 ```
 
+The repository is organized into three main pillars: **data**, **code**, and **deploy**.  
+
+- The **`data/`** directory holds all datasets, arranged by *what they are*.  
+  - Each dataset folder includes a `README.md` with source and schema details.  
+  - Standard subfolders are `raw/` (untouched inputs) and `processed/` (cleaned or derived outputs).  
+  - Large or local-only datasets are clearly marked.  
+
+- The **`code/`** directory contains all scripts, notebooks, and modules, arranged by *what they do*.  
+  - Each folder aligns with a dataset or analysis task, so it’s easy to trace inputs → transformations → models.  
+
+- The **`deploy/`** directory is for infrastructure, containerization, and workflow automation.  
+  - This part of the repository is **ongoing** and will be updated as deployment workflows mature.  
+
+👉 **Rule of thumb:** look under `data/` to find the data itself, under `code/` to see how that data is used, and under `deploy/` for how analyses and models are run in production.  
+
+
+```
+data/
+├─ basin_discharge/          # Basin discharge data (from local government)
+│  └─ README.md
+├─ boundaries/               # All boundary layers
+│  ├─ basins/
+│  ├─ 186_watershed/
+│  ├─ world_boundaries_for_bhutan_map/
+│  └─ README.md
+├─ era5/                     # ERA5 climate data
+│  ├─ era5_data_excel/
+│  ├─ era5_data_grib_raw/
+│  └─ era5_merged/           # local only due to size limit
+├─ flood_data/               # Cleaned and merged historical flood records for Bhutan (1979–2025)
+│  └─ README.md
+├─ glof_data/                # GLOF-related datasets
+├─ HydroSHEDS/               # HydroSHEDS products, local only due to size limit
+├─ MET_data/                 # Meteorological station data (from local government)
+│  ├─ raw/
+│  ├─ processed_MET_data/    # cleaned outputs: region PKLs, summary.csv, region_coordinates.csv
+│  └─ README.md
+```
 
 ```
 code/
