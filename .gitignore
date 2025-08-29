@@ -2,7 +2,7 @@
 *.idx
 
 # Ignore all large data files
-data/era5/era5_merged/
+data/era5/
 data/HydroSHEDS/
 
 # Ignore ecmwf forecast data due to size limit
