@@ -29,6 +29,7 @@ This folder contains downsampled ERA5 weather variable data in Excel format. Eac
   - `2m_dewpoint_temperature`
   - `10m_u_component_of_wind`
   - `10m_v_component_of_wind`
+  - `potential_evaporation`
 
 - **📤 Source**:  
   Data was extracted from **ERA5 `.grib` files** and processed via an automated Python pipeline.  
