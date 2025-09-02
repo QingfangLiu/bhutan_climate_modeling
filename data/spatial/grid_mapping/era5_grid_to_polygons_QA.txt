@@ -1,0 +1,15 @@
+=== GRID → POLYGON MAPPING (simple, cell-center) ===
+Input parquet:  /Users/liuq13/bhutan_climate_modeling/data/era5/era5_merged/merged_era5_6hour_1979_2025.parquet
+Basins dir:     /Users/liuq13/bhutan_climate_modeling/data/boundaries/basins
+Watersheds dir: /Users/liuq13/bhutan_climate_modeling/data/boundaries/186_watershed
+
+Unique grid cells:   135
+Unmapped (outside):  61  (45.19%)
+
+Example rows:
+          grid_id  latitude  longitude  basin_id  watershed_id  outside_flag
+gf81d7fb303616195      26.5      88.50       NaN           NaN          True
+g0be12287883e2881      26.5      88.75       NaN           NaN          True
+gcaddc3e21bd4a5f1      26.5      89.00       NaN           NaN          True
+g6aa345cebf65e0f4      26.5      89.25       NaN           NaN          True
+g55221829641bde3e      26.5      89.50       NaN           NaN          True
