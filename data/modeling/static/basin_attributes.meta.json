@@ -1,0 +1,36 @@
+{
+  "created_utc": "2025-09-05T17:21:28Z",
+  "source_files": [
+    "data/boundaries/processed/basin_shape_stats.csv",
+    "data/boundaries/processed/basin_dem_acc_stats.csv",
+    "data/boundaries/processed/basin_lookup.csv"
+  ],
+  "extra_sources": [],
+  "n_basins": 9,
+  "columns": [
+    "basin_id",
+    "basin_name",
+    "longitude",
+    "latitude",
+    "area_sqkm",
+    "perimeter_km",
+    "compactness",
+    "perim_area_ratio",
+    "dem_min",
+    "dem_max",
+    "dem_mean",
+    "dem_median",
+    "dem_std",
+    "elev_range_m",
+    "dem_cv",
+    "slope_mean",
+    "slope_p90_deg",
+    "relief_m",
+    "log_acc_mean",
+    "log_acc_max",
+    "pct_slope_gt_a",
+    "pct_slope_gt_b",
+    "acc_mean",
+    "acc_max"
+  ]
+}
