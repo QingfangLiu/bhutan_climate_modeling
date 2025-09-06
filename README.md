@@ -207,6 +207,36 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 
 ---
 
+## 📦 Hugging Face Dataset  
+
+To make datasets easier to access and share, selected processed data are hosted on Hugging Face:  
+
+**Dataset:** [qlk0610/bhutan-climate](https://huggingface.co/datasets/qlk0610/bhutan-climate)  
+
+**Contents:**  
+- `HydroSHEDS/` – Elevation (DEM) and flow accumulation (ACC) layers for Bhutan  
+- `era5/` – ERA5 reanalysis data (subset and aligned extracts for Bhutan)  
+- `README.md` – Dataset documentation  
+
+**Notes:**  
+- Full ERA5 and HydroSHEDS are too large to store on GitHub, so this Hugging Face dataset provides a lightweight mirror.  
+- Use it to quickly download subsets for experimentation or teaching.    
+
+**Example (Python):**  
+
+```python
+from datasets import load_dataset
+
+# Load dataset metadata
+ds = load_dataset("qlk0610/bhutan-climate")
+
+# Explore contents
+print(ds)
+```
+
+---
+
+
 ## 📁 Repository Structure
 
 ```
