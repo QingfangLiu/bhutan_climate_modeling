@@ -125,7 +125,7 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ---
 
-### 2. Exploratory Data Analysis (EDA) (Ongoing) 
+### 2. Exploratory Data Analysis (EDA) (Completed) 
 
 **Goal:** Understand patterns, distributions, and anomalies in the processed climate and flood datasets
 
@@ -150,7 +150,7 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ---
 
-### 4. Spatial Alignment (Ongoing)  
+### 4. Spatial Alignment (Completed)  
 
 **Goal:** Align data from multiple sources across different spatial dimensions.  
 
