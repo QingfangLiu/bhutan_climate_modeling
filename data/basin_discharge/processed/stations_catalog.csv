@@ -1,6 +1,6 @@
-station_name,first_day,last_day,n_days,n_duplicates_removed,pct_missing_in_span,mean,p50,p95,parquet_path
-Kurjey (Chamkharchhu),2000-01-01,2023-12-31,8766,0,0.0,52.35183334350586,30.610000610351562,148.17675399780273,data/basin_discharge/processed/station=kurjey_chamkharchhu.parquet
-Lungtenphu (Wangchhu),1991-04-22,2024-12-31,12308,0,0.0,21.874526977539062,10.440999984741211,67.43025245666503,data/basin_discharge/processed/station=lungtenphu_wangchhu.parquet
-Pangbang dangmechhu,2011-01-01,2023-12-31,4748,0,0.0,781.4302978515625,416.2984924316406,2362.4053833007797,data/basin_discharge/processed/station=pangbang_dangmechhu.parquet
-Wangdi rapid (Punatshangchhu),2000-01-01,2023-12-31,8766,0,0.0,298.2007141113281,162.5709991455078,870.60888671875,data/basin_discharge/processed/station=wangdi_rapid_punatshangchhu.parquet
-tingtibi (Mangdichhu),2005-06-26,2023-12-31,6763,0,0.0,136.8936309814453,79.50800323486328,382.4872131347656,data/basin_discharge/processed/station=tingtibi_mangdichhu.parquet
+station_name,first_day,last_day,n_days,n_duplicates_removed,pct_missing_in_span,mean,p50,p95,parquet_path,qc_flag_negative_pct,qc_flag_flatline_pct,qc_flag_spike_pct,qc_any_pct
+Kurjey (Chamkharchhu),2000-01-01,2023-12-31,8766,0,0.0,52.35183334350586,30.610000610351562,148.17675399780273,data/basin_discharge/processed/station=kurjey_chamkharchhu.parquet,0.0,0.0,2.08,2.08
+Lungtenphu (Wangchhu),1991-04-22,2024-12-31,12308,0,0.0,21.874526977539062,10.440999984741211,67.43025245666503,data/basin_discharge/processed/station=lungtenphu_wangchhu.parquet,0.0,0.0,2.79,2.79
+Pangbang dangmechhu,2011-01-01,2023-12-31,4748,0,0.0,781.4302978515625,416.2984924316406,2362.4053833007797,data/basin_discharge/processed/station=pangbang_dangmechhu.parquet,0.0,0.0,2.06,2.06
+Wangdi rapid (Punatshangchhu),2000-01-01,2023-12-31,8766,0,0.0,298.2007141113281,162.5709991455078,870.60888671875,data/basin_discharge/processed/station=wangdi_rapid_punatshangchhu.parquet,0.0,0.0,1.47,1.47
+tingtibi (Mangdichhu),2005-06-26,2023-12-31,6763,0,0.0,136.8936309814453,79.50800323486328,382.4872131347656,data/basin_discharge/processed/station=tingtibi_mangdichhu.parquet,0.0,0.0,1.98,1.98
