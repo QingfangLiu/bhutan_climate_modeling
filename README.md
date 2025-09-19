@@ -119,7 +119,7 @@ We also compiled flood event data from multiple public sources. With the help of
 
 ####  Data Sources to explore
 
-- Earthquake data
+
 - Other geospatial features: land cover, infrastructure exposure, imperviousness, etc
 
 
@@ -184,26 +184,10 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 
 #### Evaluation
 - Train/test split by time
-- Metrics:
-  - Classification: Accuracy, F1-score, Confusion Matrix
-  - Regression: RMSE, MAE
-- Cross-validation or time series split
-- Visualizations: prediction vs actual plots
-
----
+- Metrics: RMSE, MAE
+- time series split
 
 
-
-### 6. Deployment (Ongoing)
-**Goal:** Build a usable predictive tool  
-
-- Options:
-  - Backend: Flask / FastAPI
-  - Frontend: Streamlit
-  - Daily scheduled inference
-- Stretch goals:
-  - Interactive dashboard (Plotly, Dash)
-  - Risk alerts for high-probability days
 
 ---
 
