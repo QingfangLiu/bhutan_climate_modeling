@@ -107,20 +107,26 @@ Later, I prepared and presented this mid-term report to Bhutan local climatologi
 **Purpose:** These engineered features were derived to better capture terrain and flow dynamics that may be more closely related to flood occurrence.  
 
 
+####  Other geospatial features
+
+- land cover
+- soil type
+
+
 #### Flood Historical Records
 
 We also compiled flood event data from multiple public sources. With the help of ChatGPT agent, significant effort was made to manually review, deduplicate, and clean these records, resulting in a unified dataset of major flood events in Bhutan from 1979 to 2025.
 
 
-####  Other Explored Data Sources
+####  GLOF event history 
 
 - GLOF event history 
+
+
+####  River discharge data 
+
 - River discharge data
 
-####  Data Sources to explore
-
-
-- Other geospatial features: land cover, infrastructure exposure, imperviousness, etc
 
 
 ---
@@ -167,7 +173,7 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 
 ### 5. ML / DL Modeling (Ongoing)
 
-**Goal:** Predict flood or extreme rainfall risk  
+**Goal:** Predict flood risk by modeling historical river discharge data   
 
 #### Feature Engineering
 - Lagged variables (1, 3, 7, 14, 30 days)
@@ -176,10 +182,8 @@ We leveraged a variety of shapefiles, mostly from the [Bhutan NSDI portal](https
 - Spatial features: elevation, river and lake metrics 
 
 #### Model Development
-- Binary classification (e.g., extreme rainfall event)  
-- Regression (e.g., total daily rainfall)
 - **Algorithms:**
-  - ML: XGBoost, RandomForest, Logistic Regression
+  - ML: XGBoost, RandomForest, Ridge Regression
   - DL: CNN-LSTM, Transformers
 
 #### Evaluation
@@ -226,7 +230,6 @@ print(ds)
 ```
 .
 ├─ code/                         # Python scripts & notebooks for downloading, cleaning, features, modeling
-├─ deploy/                       # Docker/K8s/Prefect/Terraform configs for running in dev/prod
 ├─ docs/                         # Project documentation, diagrams, and notes
 ├─ data/                         # All datasets organized by WHAT they are
 ```
@@ -240,11 +243,6 @@ The repository is organized into three main pillars: **data**, **code**, and **d
 
 - The **`code/`** directory contains all scripts, notebooks, and modules, arranged by *what they do*.  
   - Each folder aligns with a dataset or analysis task, so it’s easy to trace inputs → transformations → models.  
-
-- The **`deploy/`** directory is for infrastructure, containerization, and workflow automation.  
-  - This part of the repository is **ongoing** and will be updated as deployment workflows mature.  
-
-👉 **Rule of thumb:** look under `data/` to find the data itself, under `code/` to see how that data is used, and under `deploy/` for how analyses and models are run in production.  
 
 
 ```
@@ -274,8 +272,7 @@ data/
 code/
 ├─ basin_discharge/              # basin shapefile inspection & conjunction with river discharge (to confirm)
 ├─ hydrosheds_stats/             # Derive stats like dem & acc from hydrosheds data on basin and watershed levels (to confirm)
-├─ discharge/                    # analysis on river discharge data of each station (ongoing)
-├─ earthquake/                   # Earthquake-related scripts (ongoing)
+├─ discharge/                    # analysis on river discharge data of each station (completed)
 ├─ ecmwf/                        # ECMWF forecast data handling (download, processing) (completed)
 ├─ era5_download/                # Scripts for downloading ERA5 reanalysis data (completed)
 ├─ era5_processing/              # Cleaning/transforming ERA5 into usable formats (completed)
